@@ -160,6 +160,7 @@ app.get('/me', checkAuthMiddleware, (request, response) => {
   }
 
   return response.json({
+    name: user.name,
     email,
     permissions: user.permissions,
     roles: user.roles,
